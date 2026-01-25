@@ -1,4 +1,6 @@
 import React from 'react';
+import editorial1 from '../images/editorial_1.png';
+import editorial2 from '../images/editorial_2.png';
 
 const Library = () => {
     return (
@@ -44,11 +46,11 @@ const Library = () => {
                     </div>
 
                     <div className="editorial-col-4" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingTop: '100px' }}>
-                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <span className="text-label">Process Image 01</span>
+                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '400px', overflow: 'hidden' }}>
+                            <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
-                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <span className="text-label">Detail Study 02</span>
+                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '300px', overflow: 'hidden' }}>
+                            <img src={editorial1} alt="Process study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </div>
                 </div>
