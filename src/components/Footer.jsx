@@ -9,39 +9,41 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-inner">
                     <div className="footer-brand">
-                        <h3 className="footer-brand-name">Vastra Studios</h3>
+                        <h3 className="footer-brand-name font-serif italic" style={{ fontSize: '1.5rem' }}>Vastra Studios</h3>
                         <p className="footer-brand-text">
-                            Premium apparel designed for the modern individual. Culture, craft, and conscience.
+                            A multidisciplinary apparel house focusing on the intersection of culture, craft, and conscience.
+                            Part of the Vastra Group.
                         </p>
                         <span className="footer-copyright">
-                            © {currentYear} Vastra Studios. All rights reserved.
+                            © {currentYear} Vastra Studios.
                         </span>
                     </div>
 
                     <div className="footer-links">
                         <div className="footer-col">
-                            <span className="footer-col-title">Shop</span>
+                            <span className="footer-col-title">Browse</span>
                             <div className="footer-col-links">
-                                <Link to="/collections" className="footer-col-link">New Arrivals</Link>
-                                <Link to="/collections" className="footer-col-link">Essentials</Link>
-                                <Link to="/lookbook" className="footer-col-link">Lookbook</Link>
+                                <Link to="/collections" className="footer-col-link">The Drop</Link>
+                                <Link to="/archive" className="footer-col-link">The Archive</Link>
+                                <Link to="/service" className="footer-col-link">Care Guide</Link>
                             </div>
                         </div>
 
                         <div className="footer-col">
-                            <span className="footer-col-title">Company</span>
+                            <span className="footer-col-title">Collective</span>
                             <div className="footer-col-links">
-                                <Link to="/about" className="footer-col-link">Story</Link>
-                                <Link to="/contact" className="footer-col-link">Contact</Link>
+                                <Link to="/library" className="footer-col-link">Mission</Link>
+                                <Link to="/library" className="footer-col-link">Origin</Link>
+                                <Link to="/contact" className="footer-col-link">Connect</Link>
+                            </div>
+                        </div>
+
+                        <div className="footer-col">
+                            <span className="footer-col-title">Terms</span>
+                            <div className="footer-col-links">
                                 <Link to="/legal" className="footer-col-link">Privacy</Link>
-                            </div>
-                        </div>
-
-                        <div className="footer-col">
-                            <span className="footer-col-title">Social</span>
-                            <div className="footer-col-links">
-                                <a href="https://instagram.com/Vastra.Studios" target="_blank" rel="noopener noreferrer" className="footer-col-link">Instagram</a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="footer-col-link">Twitter</a>
+                                <Link to="/legal" className="footer-col-link">Terms</Link>
+                                <Link to="/service" className="footer-col-link">Returns</Link>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,19 @@
 import React from 'react';
 
-const ProductCard = ({ title, price, imageSrc, imagePlaceholder, className }) => {
+const ProductCard = ({ title, price, imageSrc, imagePlaceholder, status, archive, className }) => {
     return (
-        <div className={`project-card group ${className || ''}`}>
+        <div className={`project-card group ${archive ? 'archive-card' : ''} ${className || ''}`}>
             <div className="project-card-image">
+                {/* Status Tag */}
+                {status && (
+                    <div className="absolute top-4 left-4 z-10">
+                        <span className={`tag ${status === 'Sold Out' ? 'tag-sold-out' : 'tag-active'}`}>
+                            {status}
+                        </span>
+                    </div>
+                )}
+
+                {/* Image Container */}
                 <div className="absolute inset-0 group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]">
                     {imageSrc ? (
                         <img
@@ -14,10 +24,25 @@ const ProductCard = ({ title, price, imageSrc, imagePlaceholder, className }) =>
                     ) : (
                         <div className="portfolio-placeholder">
                             <span className="portfolio-placeholder-title">{imagePlaceholder || title}</span>
-                            <span className="portfolio-placeholder-status">Summer 2024</span>
                         </div>
                     )}
                 </div>
+
+                {/* Sold Out Overlay */}
+                {status === 'Sold Out' && (
+                    <div className="status-overlay">
+                        <span className="status-label">Sold Out</span>
+                    </div>
+                )}
+
+                {/* Archive Overlay */}
+                {archive && !status && (
+                    <div className="status-overlay">
+                        <span className="status-label">Archived</span>
+                    </div>
+                )}
+
+                {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
             </div>
 

@@ -2,33 +2,49 @@ import React from 'react';
 
 const Legal = () => {
     return (
-        <section className="section">
+        <section className="section-lg">
             <div className="container">
                 <div style={{ maxWidth: '800px' }}>
-                    <h1 className="text-h1 mb-lg">Legal</h1>
+                    <span className="tag">Compliance</span>
+                    <h1 className="text-hero mb-xl">Legal</h1>
 
-                    <div style={{ marginBottom: '48px' }}>
-                        <h2 className="text-h3 mb-md">Privacy Policy</h2>
-                        <p className="text-body text-muted">
-                            Vastra Studios respects your privacy. We collect minimal data for shipping and customer support.
-                            Your information is never sold to third parties.
-                        </p>
-                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
+                        <section>
+                            <h2 className="text-h2 mb-md font-serif italic">Privacy Policy</h2>
+                            <p className="text-body text-muted mb-md">
+                                Vastra Studios ("we," "us," or "our") is committed to protecting your privacy. This policy explains how we collect and use your data when you interact with our collective.
+                            </p>
+                            <h3 className="text-h3 mb-sm">Data Collection</h3>
+                            <p className="text-body text-muted mb-md">
+                                We collect information provided directly by you, such as your name, shipping address, and email when you register for Member Access or place an order.
+                            </p>
+                            <h3 className="text-h3 mb-sm">Cookies</h3>
+                            <p className="text-body text-muted">
+                                Our site uses essential cookies to manage your session and shopping experience. We do not use third-party tracking pixels for advertising purposes.
+                            </p>
+                        </section>
 
-                    <div style={{ marginBottom: '48px' }}>
-                        <h2 className="text-h3 mb-md">Terms of Service</h2>
-                        <p className="text-body text-muted">
-                            All apparel is sold as-is. Returns are accepted within 14 days of receipt for store credit only.
-                            Limit 2 items per customer for limited releases.
-                        </p>
-                    </div>
+                        <section>
+                            <h2 className="text-h2 mb-md font-serif italic">Terms of Service</h2>
+                            <p className="text-body text-muted mb-md">
+                                By accessing Vastra Studios, you agree to abide by our terms of conduct and sales.
+                            </p>
+                            <h3 className="text-h3 mb-sm">Seasonal Drops</h3>
+                            <p className="text-body text-muted mb-md">
+                                Items in the "Current Drop" are limited in quantity. Placing an item in your cart does not reserve it; only a completed checkout guarantees your purchase. Once a season enters the Archive, it will not be restocked.
+                            </p>
+                            <h3 className="text-h3 mb-sm">Intellectual Property</h3>
+                            <p className="text-body text-muted">
+                                All designs, imagery, and text on this site are the sole property of the VASTRA group. Reproduction without express written consent is prohibited.
+                            </p>
+                        </section>
 
-                    <div>
-                        <h2 className="text-h3 mb-md">Shipping</h2>
-                        <p className="text-body text-muted">
-                            Each garment is made to order. Please allow 2-3 weeks for construction and shipping.
-                            Global shipping available. Customs and duties are the responsibility of the customer.
-                        </p>
+                        <section>
+                            <h2 className="text-h2 mb-md font-serif italic">Ethics Statement</h2>
+                            <p className="text-body text-muted">
+                                Vastra Studios operates on a zero-waste philosophy. We maintain transparent relationships with our partners and ensure a living wage is paid throughout our supply chain.
+                            </p>
+                        </section>
                     </div>
                 </div>
             </div>

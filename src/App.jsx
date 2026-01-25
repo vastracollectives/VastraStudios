@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Collections from './pages/Collections';
-import Lookbook from './pages/Lookbook';
-import About from './pages/About';
+import Archive from './pages/Archive';
+import Library from './pages/Library';
+import Service from './pages/Service';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
 import ScrollToTop from './components/ScrollToTop';
@@ -16,8 +17,9 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="collections" element={<Collections />} />
-                    <Route path="lookbook" element={<Lookbook />} />
-                    <Route path="about" element={<About />} />
+                    <Route path="archive" element={<Archive />} />
+                    <Route path="library" element={<Library />} />
+                    <Route path="service" element={<Service />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="legal" element={<Legal />} />
                 </Route>

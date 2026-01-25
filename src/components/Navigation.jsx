@@ -14,11 +14,11 @@ const Navigation = () => {
                     </Link>
 
                     <div className="nav-links">
-                        <Link to="/collections" className="nav-link">Collections</Link>
-                        <Link to="/lookbook" className="nav-link">Lookbook</Link>
-                        <Link to="/about" className="nav-link">About</Link>
+                        <Link to="/collections" className="nav-link">The Drop</Link>
+                        <Link to="/archive" className="nav-link">Archive</Link>
+                        <Link to="/library" className="nav-link">The Library</Link>
                         <Link to="/contact" className="btn btn-primary">
-                            Pre-Order
+                            Member Access
                         </Link>
                     </div>
 
@@ -33,11 +33,12 @@ const Navigation = () => {
             </nav>
 
             <div className={`nav-mobile ${isOpen ? 'open' : ''}`}>
-                <Link to="/collections" onClick={() => setIsOpen(false)} className="nav-mobile-link">Collections</Link>
-                <Link to="/lookbook" onClick={() => setIsOpen(false)} className="nav-mobile-link">Lookbook</Link>
-                <Link to="/about" onClick={() => setIsOpen(false)} className="nav-mobile-link">About</Link>
+                <Link to="/collections" onClick={() => setIsOpen(false)} className="nav-mobile-link">The Drop</Link>
+                <Link to="/archive" onClick={() => setIsOpen(false)} className="nav-mobile-link">Archive</Link>
+                <Link to="/library" onClick={() => setIsOpen(false)} className="nav-mobile-link">The Library</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)} className="nav-mobile-link">Connect</Link>
                 <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary mt-md">
-                    Pre-Order
+                    Member Access
                 </Link>
             </div>
         </>

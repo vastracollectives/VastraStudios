@@ -1,16 +1,66 @@
-# React + Vite
+# Vastra Studios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Culture, craft, and conscience.
 
-Currently, two official plugins are available:
+**Website:** [Preview locally or deploy to Vercel]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎨 Brand Identity
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Vastra Studios is the apparel and object division of the VASTRA collective. We focus on "slow fashion"—timeless silhouettes, ethical construction, and a minimalist "Bone & Charcoal" aesthetic.
 
-## Expanding the ESLint configuration
+### Design Tokens
+- **Palette:** Bone (`#F7F3EF`), Charcoal (`#222222`)
+- **Typography:** Serif (Cormorant Garamond) for headers, Sans (Inter) for systems.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Stack
+
+- **React 18** + **Vite**
+- **Vanilla CSS** (Vastra Design System v2.0)
+- **React Router** for seamless lookbook navigation.
+- **Lucide React** for minimalist iconography.
+
+---
+
+## 📁 Structure
+
+```
+VastraStudios/
+├── src/
+│   ├── components/
+│   │   ├── Navigation.jsx    # Studios branding
+│   │   ├── ProductCard.jsx   # Grid items for apparel
+│   │   └── Layout.jsx        # App wrapper
+│   └── pages/
+│       ├── Home.jsx          # "Culture & Craft" landing
+│       ├── Collections.jsx   # Apparel catalog
+│       ├── Lookbook.jsx      # Visual storytelling
+│       └── About.jsx         # Study in essentialism
+└── vercel.json               # SPA routing
+```
+
+---
+
+## 🚀 Development
+
+### Setup
+```bash
+npm install
+npm run dev
+```
+
+### Deployment
+1. Create a new repository on GitHub.
+2. Link the repository:
+   ```bash
+   git remote add origin https://github.com/your-username/VastraStudios.git
+   git push -u origin main
+   ```
+3. Import to **Vercel** for automatic hosting.
+
+---
+
+© 2024 Vastra Studios. All rights reserved.

@@ -1,97 +1,108 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Scissors, Feather, Award } from 'lucide-react';
+import { ArrowRight, Scissors, Feather, Award, ChevronDown } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import editorial1 from '../images/editorial_1.png';
+import editorial3 from '../images/editorial_3.png';
 
 const Home = () => {
     return (
         <>
-            {/* Hero Section */}
-            <section className="hero">
+            {/* Editorial Hero */}
+            <section className="hero" style={{ paddingTop: '160px' }}>
                 <div className="hero-content">
-                    <span className="hero-label">Vastra Studios</span>
-                    <h1 className="text-hero hero-title">
-                        Culture, craft,<br />and conscience.
+                    <span className="tag">Season 01: Monolith</span>
+                    <h1 className="text-hero hero-title font-serif italic" style={{ fontSize: 'clamp(3rem, 10vw, 7rem)', lineHeight: '0.9', marginBottom: '48px' }}>
+                        Heavyweight<br />Silence.
                     </h1>
-                    <p className="hero-subtitle">
-                        Premium apparel for the modern individual. Designed with intention, made with care.
+                    <p className="hero-subtitle" style={{ maxWidth: '500px' }}>
+                        Architectural apparel designed to withstand the noise. Our primary drop is now available for member early access.
                     </p>
                     <div className="hero-buttons">
                         <Link to="/collections" className="btn btn-primary">
-                            Explore Collections
+                            Enter the Drop
                         </Link>
-                        <Link to="/lookbook" className="btn btn-outline">
-                            View Lookbook
+                        <Link to="/library" className="btn btn-outline">
+                            The Philosophy
                         </Link>
                     </div>
                 </div>
-                <div className="hero-bg"></div>
+                <div className="hero-bg" style={{
+                    backgroundImage: `url(${editorial3})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: '0.15',
+                    filter: 'grayscale(1)',
+                    zIndex: '0'
+                }}></div>
             </section>
 
-            {/* Values Section */}
-            <section className="value-section">
+            {/* Split Editorial Section */}
+            <section className="section-lg" style={{ background: 'var(--white)' }}>
                 <div className="container">
-                    <div className="grid grid-3">
-                        <div className="value-card">
-                            <Scissors size={28} strokeWidth={1.5} className="value-icon" />
-                            <h3 className="value-title">Bespoke Quality</h3>
-                            <p className="value-text">
-                                Every piece is constructed with precision and high-grade materials that last.
-                            </p>
+                    <div className="editorial-grid" style={{ alignItems: 'center' }}>
+                        <div className="editorial-col-6">
+                            <div style={{ height: '600px', background: 'var(--bg-bone)', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
+                                <img src={editorial1} alt="Season Campaign" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
                         </div>
-                        <div className="value-card">
-                            <Feather size={28} strokeWidth={1.5} className="value-icon" />
-                            <h3 className="value-title">Ethical Sourcing</h3>
-                            <p className="value-text">
-                                We partner with manufacturers who value human dignity and environmental stewardship.
+                        <div className="editorial-col-6" style={{ paddingLeft: '40px' }}>
+                            <span className="tag">Process</span>
+                            <h2 className="text-h1 mb-md">Built for the long haul.</h2>
+                            <p className="text-body text-muted mb-lg">
+                                We don't believe in disposability. Vastra Studios garments are constructed using high-GSM Japanese cotton
+                                and reinforced stitching. They are designed to age with the wearer, gathering character rather than wear.
                             </p>
-                        </div>
-                        <div className="value-card">
-                            <Award size={28} strokeWidth={1.5} className="value-icon" />
-                            <h3 className="value-title">Timeless Design</h3>
-                            <p className="value-text">
-                                We don't follow trends. We build icons that remain relevant for years to come.
-                            </p>
+                            <Link to="/library" className="featured-link">
+                                Read our Mission <ArrowRight size={18} />
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Featured Collection Section */}
-            <section className="section">
+            {/* Current Spotlight */}
+            <section className="section-lg">
                 <div className="container">
                     <div className="featured-header">
-                        <h2 className="text-h1">Season 01</h2>
+                        <div>
+                            <span className="tag">Limited Edition</span>
+                            <h2 className="text-h1">Essential Edits</h2>
+                        </div>
                         <Link to="/collections" className="featured-link">
-                            Shop All <ArrowRight size={18} />
+                            View Season 01 <ArrowRight size={18} />
                         </Link>
                     </div>
 
-                    <div className="grid grid-2">
+                    <div className="grid grid-2" style={{ gap: '64px 32px' }}>
                         <ProductCard
-                            title="The Core Tee"
-                            price="$45.00"
-                            imagePlaceholder="Core Tee"
+                            title="Heavyweight Hoodie"
+                            price="$95"
+                            imagePlaceholder="Bone Hoodie"
+                            status="Limited"
                         />
                         <ProductCard
-                            title="Linen Overshirt"
-                            price="$110.00"
-                            imagePlaceholder="Overshirt"
+                            title="Structure Pant"
+                            price="$140"
+                            imagePlaceholder="Charcoal Pant"
+                            status="Sold Out"
                         />
                     </div>
                 </div>
             </section>
 
-            {/* CTA Banner */}
-            <section className="cta-banner">
+            {/* Archive Tease */}
+            <section className="section-lg" style={{ borderTop: '1px solid var(--border-color)', textAlign: 'center' }}>
                 <div className="container">
-                    <h2 className="text-h1 cta-title">Join the collective.</h2>
-                    <p className="cta-text">
-                        Sign up for early access to new drops and limited editions.
-                    </p>
-                    <Link to="/contact" className="btn btn-primary">
-                        Subscribe
-                    </Link>
+                    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+                        <h2 className="text-h2 mb-md font-serif italic">From the Depths.</h2>
+                        <p className="text-body text-muted mb-lg">
+                            Explore the evolution of our silhouettes. View the pieces that defined our early experiments.
+                        </p>
+                        <Link to="/archive" className="btn btn-outline">
+                            Browse the Archive
+                        </Link>
+                    </div>
                 </div>
             </section>
         </>
