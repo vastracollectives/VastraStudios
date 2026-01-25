@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProductCard = ({ title, price, imageSrc, imagePlaceholder, status, archive, className }) => {
-    return (
+const ProductCard = ({ id, title, price, imageSrc, imagePlaceholder, status, archive, className }) => {
+    const cardContent = (
         <div className={`project-card group ${archive ? 'archive-card' : ''} ${className || ''}`}>
             <div className="project-card-image">
                 {/* Status Tag */}
@@ -51,6 +52,16 @@ const ProductCard = ({ title, price, imageSrc, imagePlaceholder, status, archive
                 <p className="project-card-category">{price}</p>
             </div>
         </div>
+    );
+
+    if (archive || status === 'Sold Out') {
+        return cardContent;
+    }
+
+    return (
+        <Link to={`/product/${id}`}>
+            {cardContent}
+        </Link>
     );
 };
 

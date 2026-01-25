@@ -623,3 +623,261 @@ img {
 .footer-col-link:hover {
   opacity: 0.6;
 }
+
+/* ============================================
+   E-COMMERCE COMPONENTS
+   ============================================ */
+/* Cart Overlay & Drawer */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+}
+
+.cart-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+  background: var(--bg-bone);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cart-header {
+  padding: 32px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-item-image {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.cart-item-price {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.quantity-toggle span {
+  font-size: 0.75rem;
+  min-width: 12px;
+  text-align: center;
+}
+
+.cart-remove {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.cart-remove:hover {
+  color: var(--accent-clay);
+}
+
+.cart-footer {
+  padding: 32px;
+  border-top: 1px solid var(--border-color);
+  background: var(--white);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Product Detail Page (PDP) */
+.pdp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+@media (min-width: 1024px) {
+  .pdp-grid {
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+.pdp-image-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pdp-image-container {
+  aspect-ratio: 1/1;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pdp-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pdp-info {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.pdp-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.pdp-price {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.pdp-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.pdp-details {
+  margin-bottom: 40px;
+}
+
+.pdp-detail-item {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.breadcrumb-separator {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumb-link {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover {
+  color: var(--text-charcoal);
+}
+
+.breadcrumb-current {
+  color: var(--text-charcoal);
+  pointer-events: none;
+}
+
+/* Nav Cart Icon Styles */
+.nav-cart {
+  position: relative;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--text-charcoal);
+  color: var(--bg-bone);
+  font-size: 9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}

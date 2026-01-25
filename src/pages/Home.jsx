@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Scissors, Feather, Award, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import { products } from '../data';
 import editorial1 from '../images/editorial_1.png';
 import editorial3 from '../images/editorial_3.png';
 
@@ -74,19 +75,18 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <div className="grid grid-2" style={{ gap: '64px 32px' }}>
-                        <ProductCard
-                            title="Heavyweight Hoodie"
-                            price="$95"
-                            imagePlaceholder="Bone Hoodie"
-                            status="Limited"
-                        />
-                        <ProductCard
-                            title="Structure Pant"
-                            price="$140"
-                            imagePlaceholder="Charcoal Pant"
-                            status="Sold Out"
-                        />
+                    <div className="grid grid-3" style={{ gap: '32px' }}>
+                        {products.map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                id={product.id}
+                                title={product.title}
+                                price={product.price}
+                                imageSrc={product.imageSrc}
+                                imagePlaceholder={product.title}
+                                status={product.status}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

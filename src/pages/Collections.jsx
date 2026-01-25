@@ -1,16 +1,8 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
-import editorial1 from '../images/editorial_1.png';
-import editorial2 from '../images/editorial_2.png';
-import longsleeve from '../images/apparel_longsleeve.png';
+import { products } from '../data';
 
 const Collections = () => {
-    const activeDrop = [
-        { title: "Heavyweight Hoodie", price: "$95", imageSrc: editorial1, placeholder: "Hoodie", status: "Active" },
-        { title: "Structure Pant", price: "$140", imageSrc: editorial2, placeholder: "Pant", status: "Limited" },
-        { title: "Core Longsleeve", price: "$65", imageSrc: longsleeve, placeholder: "Longsleeve", status: "Active" }
-    ];
-
     return (
         <section className="section-lg">
             <div className="container">
@@ -23,14 +15,15 @@ const Collections = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-2" style={{ gap: '64px 32px' }}>
-                    {activeDrop.map((product, index) => (
+                <div className="grid grid-3" style={{ gap: '64px 32px' }}>
+                    {products.map((product) => (
                         <ProductCard
-                            key={index}
+                            key={product.id}
+                            id={product.id}
                             title={product.title}
                             price={product.price}
                             imageSrc={product.imageSrc}
-                            imagePlaceholder={product.placeholder}
+                            imagePlaceholder={product.title}
                             status={product.status}
                         />
                     ))}
