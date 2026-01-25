@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../images/logo.png';
 
 const About = () => {
     return (
@@ -13,8 +14,8 @@ const About = () => {
                 </div>
 
                 <div className="grid grid-2" style={{ alignItems: 'center', gap: '80px' }}>
-                    <div style={{ aspectHeight: '1/1', background: 'var(--white)', border: '1px solid var(--border-color)', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <span className="text-label">Studio Image</span>
+                    <div style={{ aspectHeight: '1/1', background: 'var(--white)', border: '1px solid var(--border-color)', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                        <img src={logo} alt="Vastra Studios Logo" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
                     </div>
 
                     <div>
