@@ -1,14 +1,14 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
+import editorial1 from '../images/editorial_1.png';
+import editorial2 from '../images/editorial_2.png';
+import longsleeve from '../images/apparel_longsleeve.png';
 
 const Collections = () => {
     const activeDrop = [
-        { title: "Heavyweight Hoodie", price: "$95", placeholder: "Bone Hoodie", status: "Active" },
-        { title: "Heavyweight Hoodie", price: "$95", placeholder: "Charcoal Hoodie", status: "Active" },
-        { title: "Structure Pant", price: "$140", placeholder: "Bone Pant", status: "Limited" },
-        { title: "Structure Pant", price: "$140", placeholder: "Charcoal Pant", status: "Sold Out" },
-        { title: "Core Longsleeve", price: "$65", placeholder: "Bone LS", status: "Active" },
-        { title: "Core Longsleeve", price: "$65", placeholder: "Charcoal LS", status: "Sold Out" }
+        { title: "Heavyweight Hoodie", price: "$95", imageSrc: editorial1, placeholder: "Hoodie", status: "Active" },
+        { title: "Structure Pant", price: "$140", imageSrc: editorial2, placeholder: "Pant", status: "Limited" },
+        { title: "Core Longsleeve", price: "$65", imageSrc: longsleeve, placeholder: "Longsleeve", status: "Active" }
     ];
 
     return (
@@ -29,7 +29,7 @@ const Collections = () => {
                             key={index}
                             title={product.title}
                             price={product.price}
-                            imageSrc={null} // Placeholders for now
+                            imageSrc={product.imageSrc}
                             imagePlaceholder={product.placeholder}
                             status={product.status}
                         />
