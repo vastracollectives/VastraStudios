@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="grid grid-2" style={{ gap: '100px', alignItems: 'center' }}>
                     <div>
                         <span className="tag">The Collective</span>
-                        <h1 className="text-hero font-serif italic mb-lg" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', lineHeight: '1.1' }}>
+                        <h1 className="text-hero font-serif italic mb-lg" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', lineHeight: '1.1' }}>
                             Member Access.
                         </h1>
                         <p className="text-body mb-xl" style={{ maxWidth: '500px' }}>
