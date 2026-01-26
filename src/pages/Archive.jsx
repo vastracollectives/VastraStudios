@@ -1,5 +1,8 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
+import vastraOrigin from '../images/vastra_origin.png';
+import vastraProcess from '../images/vastra_process.png';
+import vastraCollective from '../images/vastra_collective.png';
 
 const Archive = () => {
     const pastSeasons = [
@@ -9,9 +12,9 @@ const Archive = () => {
             description: "The foundational study. Exploration of raw textures and silhouette.",
             curatorNote: "Proto was an exercise in pure construction. We stripped away the brand markers to focus entirely on the hand-feel of high-density loopback cotton and the structural integrity of double-needle stitching.",
             items: [
-                { title: "Raw Hem Tee", specs: "280GSM Jersey", material: "Organic Cotton", placeholder: "Proto Tee 01" },
-                { title: "Structure Pant", specs: "400GSM Twill", material: "Heavy Drill", placeholder: "Proto Pant 02" },
-                { title: "Draft Mockneck", specs: "320GSM Rib", material: "Mercerized Cotton", placeholder: "Proto Mock 03" }
+                { title: "Raw Hem Tee", specs: "280GSM Jersey", material: "Organic Cotton", imageSrc: vastraOrigin },
+                { title: "Structure Pant", specs: "400GSM Twill", material: "Heavy Drill", imageSrc: vastraProcess },
+                { title: "Draft Mockneck", specs: "320GSM Rib", material: "Mercerized Cotton", imageSrc: vastraCollective }
             ]
         },
         {
@@ -64,6 +67,7 @@ const Archive = () => {
                                     <div key={iIdx} className="archive-item-group">
                                         <ProductCard
                                             title={item.title}
+                                            imageSrc={item.imageSrc}
                                             imagePlaceholder={item.placeholder}
                                             archive={true}
                                         />
