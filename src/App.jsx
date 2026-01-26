@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Collections from './pages/Collections';
 import ProductDetail from './pages/ProductDetail';
+import Checkout from './pages/Checkout';
 import Archive from './pages/Archive';
 import Library from './pages/Library';
 import Service from './pages/Service';
@@ -21,6 +22,7 @@ function App() {
                         <Route index element={<Home />} />
                         <Route path="collections" element={<Collections />} />
                         <Route path="product/:id" element={<ProductDetail />} />
+                        <Route path="checkout" element={<Checkout />} />
                         <Route path="archive" element={<Archive />} />
                         <Route path="library" element={<Library />} />
                         <Route path="service" element={<Service />} />

@@ -60,7 +60,14 @@ const CartDrawer = () => {
                             <span>Total</span>
                             <span>${cartTotal.toFixed(2)}</span>
                         </div>
-                        <button className="btn btn-primary w-full" style={{ width: '100%' }}>
+                        <button
+                            className="btn btn-primary w-full"
+                            style={{ width: '100%' }}
+                            onClick={() => {
+                                setIsCartOpen(false);
+                                navigate('/checkout');
+                            }}
+                        >
                             Checkout
                         </button>
                     </footer>
