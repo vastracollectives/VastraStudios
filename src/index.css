@@ -1070,11 +1070,12 @@ img {
 .ticker-track {
   display: flex;
   white-space: nowrap;
-  gap: 80px;
+  width: max-content;
   animation: ticker 40s linear infinite;
 }
 
 .ticker-track span {
+  padding: 0 40px;
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -1091,12 +1092,14 @@ img {
     transform: translateX(-50%);
   }
 }
+
 /* Responsive Grid Reversal */
 @media (min-width: 768px) {
-  .grid-reverse > div:first-child {
+  .grid-reverse>div:first-child {
     order: 2;
   }
-  .grid-reverse > div:last-child {
+
+  .grid-reverse>div:last-child {
     order: 1;
   }
 }
