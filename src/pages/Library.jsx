@@ -1,8 +1,4 @@
-import React from 'react';
-import editorial1 from '../images/editorial_1.png';
-import editorial2 from '../images/editorial_2.png';
-import vastraOrigin from '../images/vastra_origin.png';
-import vastraProcess from '../images/vastra_process.png';
+import vastraCollective from '../images/vastra_collective.png';
 
 const Library = () => {
     return (
@@ -81,7 +77,7 @@ const Library = () => {
                             </p>
                         </div>
                         <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
-                            <img src={editorial1} alt="Collective study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src={vastraCollective} alt="Collective study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ padding: '20px', background: 'var(--white)' }}>
                                 <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 03: MULTIDISCIPLINARY OUTPUT STUDY</span>
                             </div>
