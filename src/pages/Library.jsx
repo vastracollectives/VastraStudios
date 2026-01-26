@@ -6,7 +6,7 @@ const Library = () => {
     return (
         <section className="section-lg">
             <div className="container">
-                <header className="mb-xl" /*style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '64px' }}*/>
+                <header className="mb-xl" style={{ /*borderBottom: '1px solid var(--border-color)',*/ paddingBottom: '64px' }}>
                     <span className="tag">Volume 01: Foundations</span>
                     <h1 className="text-hero mb-lg font-serif italic" style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', letterSpacing: '-0.03em', lineHeight: '0.9' }}>
                         Mission & Philosophy.
