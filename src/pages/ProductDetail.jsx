@@ -62,12 +62,12 @@ const ProductDetail = () => {
                         />
 
                         {/* Distribution Notice */}
-                        <div className="distribution-notice" style={{ marginBottom: '32px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                        <div className="distribution-notice">
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
                                 <MapPin size={14} style={{ color: 'var(--text-muted)' }} />
                                 <span className="text-label" style={{ fontSize: '0.7rem' }}>Regional Distribution</span>
                             </div>
-                            <p className="text-small italic font-serif" style={{ color: 'var(--text-charcoal)', opacity: 0.8 }}>
+                            <p className="text-small italic font-serif" style={{ color: 'var(--text-charcoal)', opacity: 0.8, lineHeight: '1.6' }}>
                                 Currently in "Friends & Family" phase. Orders are available for local collection in <strong>Edison, NJ</strong> and <strong>Hyderabad, India</strong> only.
                             </p>
                         </div>
