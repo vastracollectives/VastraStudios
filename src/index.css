@@ -439,7 +439,7 @@ img {
 }
 
 .project-card-image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 4;
   background: var(--bg-bone);
   overflow: hidden;
   position: relative;
@@ -906,6 +906,7 @@ img {
   justify-content: center;
   font-weight: 600;
 }
+
 /* Technical Accordion & Spacing */
 .technical-accordion {
   margin-top: 64px;
@@ -954,8 +955,15 @@ img {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .pdp-description {
@@ -969,7 +977,8 @@ img {
   gap: 8px;
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
   padding: 16px;
   background: var(--white);
   border: 1px solid var(--border-color);
@@ -978,7 +987,8 @@ img {
   transition: border-color var(--transition-fast);
 }
 
-.form-group input:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group select:focus {
   border-color: var(--text-charcoal);
   outline: none;
 }

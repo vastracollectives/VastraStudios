@@ -15,7 +15,7 @@ const Collections = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-2" style={{ gap: '80px 48px' }}>
+                <div className="grid grid-3" style={{ gap: '64px 32px' }}>
                     {products.map((product) => (
                         <ProductCard
                             key={product.id}
