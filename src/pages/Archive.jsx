@@ -38,9 +38,13 @@ const Archive = () => {
                     </p>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '160px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
                     {pastSeasons.map((season, sIdx) => (
-                        <div key={sIdx}>
+                        <div key={sIdx} style={{
+                            borderTop: sIdx !== 0 ? '1px solid var(--border-color)' : 'none',
+                            paddingTop: sIdx !== 0 ? '80px' : '0',
+                            marginTop: sIdx !== 0 ? '80px' : '0'
+                        }}>
                             <div className="grid grid-2 mb-xl" style={{ gap: '80px', alignItems: 'start' }}>
                                 <div>
                                     <span className="text-label" style={{ color: 'var(--text-muted)' }}>Release Year: {season.year}</span>
