@@ -1091,3 +1091,12 @@ img {
     transform: translateX(-50%);
   }
 }
+/* Responsive Grid Reversal */
+@media (min-width: 768px) {
+  .grid-reverse > div:first-child {
+    order: 2;
+  }
+  .grid-reverse > div:last-child {
+    order: 1;
+  }
+}
