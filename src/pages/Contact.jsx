@@ -23,18 +23,18 @@ const Contact = () => {
                             to "The Drop" 24 hours before public release.
                         </p>
 
-                        <div className="flex flex-col gap-md">
-                            <div className="flex items-start gap-sm">
-                                <Shield size={18} className="mt-xs text-muted" />
+                        <div style={{ borderTop: '1px solid var(--border-color)', marginTop: '48px' }}>
+                            <div style={{ borderBottom: '1px solid var(--border-color)', padding: '24px 0', display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                <Shield size={20} className="text-muted" style={{ flexShrink: 0 }} />
                                 <div>
-                                    <span className="text-label block">Privacy Priority</span>
+                                    <span className="text-label block" style={{ marginBottom: '4px' }}>Privacy Priority</span>
                                     <p className="text-small text-muted">No newsletters. Only active drop notifications.</p>
                                 </div>
                             </div>
-                            <div className="flex items-start gap-sm">
-                                <MapPin size={18} className="mt-xs text-muted" />
+                            <div style={{ borderBottom: '1px solid var(--border-color)', padding: '24px 0', display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                <MapPin size={20} className="text-muted" style={{ flexShrink: 0 }} />
                                 <div>
-                                    <span className="text-label block">Regional Priority</span>
+                                    <span className="text-label block" style={{ marginBottom: '4px' }}>Regional Priority</span>
                                     <p className="text-small text-muted">First access for Edison, NJ and Hyderabad locals.</p>
                                 </div>
                             </div>
