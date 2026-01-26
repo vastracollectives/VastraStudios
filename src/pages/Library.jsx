@@ -6,51 +6,76 @@ const Library = () => {
     return (
         <section className="section-lg">
             <div className="container">
+                <header className="mb-xl" style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '64px' }}>
+                    <span className="tag">Volume 01: Foundations</span>
+                    <h1 className="text-hero mb-lg font-serif italic" style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', letterSpacing: '-0.03em', lineHeight: '0.9' }}>
+                        Mission &<br />Philosophy.
+                    </h1>
+                </header>
+
                 <div className="editorial-grid">
                     <div className="editorial-col-8">
-                        <span className="tag">The Library</span>
-                        <h1 className="text-hero mb-lg">Mission & Origin</h1>
-
-                        <div style={{ marginBottom: '80px' }}>
-                            <h2 className="text-h2 mb-md font-serif italic">Our Origin</h2>
-                            <p className="text-body text-muted mb-md">
+                        {/* Chapter 01 */}
+                        <div style={{ marginBottom: '120px' }}>
+                            <div className="flex items-center gap-md mb-md">
+                                <span className="text-label" style={{ opacity: 0.4 }}>01 / Origin</span>
+                                <div style={{ height: '1px', flex: 1, background: 'var(--border-color)' }}></div>
+                            </div>
+                            <h2 className="text-h1 mb-lg font-serif italic">Silence in the noise.</h2>
+                            <p className="text-body text-muted mb-md" style={{ fontSize: '1.25rem', lineHeight: '1.6' }}>
                                 Vastra Studios was born from a desire to bridge the gap between digital precision and physical craft.
-                                Founded as a sister project to Vastra Labs, we sought to apply the same principles of systems design
-                                to the clothing we wear every day.
+                                We sought to apply the same principles of systems design to the clothing we wear every day—focusing on the "long haul" rather than the "next trend."
                             </p>
                             <p className="text-body text-muted">
-                                We began in a small studio with three industrial sewing machines and a singular goal:
-                                to strip away the noise of fast fashion and return to the "essential."
+                                Our journey began in a cold-concrete studio with three industrial sewing machines and a singular goal:
+                                to strip away the noise of fast fashion and return to the "architectural essential." We view garments not as products, but as structures for living.
                             </p>
                         </div>
 
-                        <div style={{ marginBottom: '80px' }}>
-                            <h2 className="text-h2 mb-md font-serif italic">The Mission</h2>
+                        {/* Chapter 02 */}
+                        <div style={{ marginBottom: '120px' }}>
+                            <div className="flex items-center gap-md mb-md">
+                                <span className="text-label" style={{ opacity: 0.4 }}>02 / Process</span>
+                                <div style={{ height: '1px', flex: 1, background: 'var(--border-color)' }}></div>
+                            </div>
+                            <h2 className="text-h1 mb-lg font-serif italic">Architectural Integrity.</h2>
                             <p className="text-body text-muted mb-md">
-                                Every garment is a study. Every drop is a chapter. Our mission is to provide a curated
-                                modular wardrobe for the modern individual—those who value silence, quality, and longevity.
+                                Every garment is a structural study. We focus on weight, drape, and the architectural volume of the body.
+                                Our materials are sourced from heritage mills in Japan and India, chosen for their ability to gather character over decades, not seasons.
                             </p>
                             <p className="text-body text-muted">
-                                We operate on a "Drop & Archive" model. Once a collection is sold out, it enters
-                                the Archive, making room for the next exploration of color and form.
+                                We operate on a "Drop & Archive" model. Once a collection is sold out, it is archived as a technical reference,
+                                creating a permanent record of our evolving aesthetic.
                             </p>
                         </div>
 
+                        {/* Chapter 03 */}
                         <div>
-                            <h2 className="text-h2 mb-md font-serif italic">The Collective</h2>
+                            <div className="flex items-center gap-md mb-md">
+                                <span className="text-label" style={{ opacity: 0.4 }}>03 / The Collective</span>
+                                <div style={{ height: '1px', flex: 1, background: 'var(--border-color)' }}></div>
+                            </div>
+                            <h2 className="text-h1 mb-lg font-serif italic">Beyond Apparel.</h2>
                             <p className="text-body text-muted">
-                                Vastra Studios is part of the VASTRA group—a multidisciplinary collective of creators.
-                                We share resources, aesthetics, and philosophies across digital, physical, and visual mediums.
+                                Vastra Studios is the physical heartbeat of the VASTRA group—a multidisciplinary collective of creators.
+                                We share resources, aesthetics, and philosophies across digital, physical, and visual mediums,
+                                ensuring that every piece of 'Monolith' carries the weight of the entire collective.
                             </p>
                         </div>
                     </div>
 
-                    <div className="editorial-col-4" style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingTop: '100px' }}>
-                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '400px', overflow: 'hidden' }}>
+                    <div className="editorial-col-4" style={{ display: 'flex', flexDirection: 'column', gap: '64px', paddingTop: '160px' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
                             <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px', background: 'var(--white)' }}>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 01: TEXTILE DRAPE ANALYSIS</span>
+                            </div>
                         </div>
-                        <div style={{ aspectHeight: '4/5', background: 'var(--white)', border: '1px solid var(--border-color)', height: '300px', overflow: 'hidden' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
                             <img src={editorial1} alt="Process study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px', background: 'var(--white)' }}>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: STRUCTURAL INTEGRITY STUDY</span>
+                            </div>
                         </div>
                     </div>
                 </div>
