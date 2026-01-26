@@ -906,3 +906,58 @@ img {
   justify-content: center;
   font-weight: 600;
 }
+/* Technical Accordion & Spacing */
+.technical-accordion {
+  margin-top: 64px;
+  margin-bottom: 48px;
+  border-top: 1px solid var(--border-color);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+}
+
+.accordion-trigger:hover {
+  opacity: 0.7;
+}
+
+.accordion-content {
+  padding-bottom: 32px;
+  animation: fadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Distribution Notice Refinement */
+.distribution-notice {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  border-left: 2px solid var(--text-charcoal);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pdp-description {
+  margin-bottom: 48px;
+}
