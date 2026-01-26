@@ -1,22 +1,23 @@
 import React from 'react';
 import editorial1 from '../images/editorial_1.png';
 import editorial2 from '../images/editorial_2.png';
+import vastraOrigin from '../images/vastra_origin.png';
 
 const Library = () => {
     return (
         <section className="section-lg">
             <div className="container">
-                <header className="mb-xl" style={{ /*borderBottom: '1px solid var(--border-color)',*/ paddingBottom: '64px' }}>
+                <header className="mb-xl" style={{ paddingBottom: '64px' }}>
                     <span className="tag">Volume 01: Foundations</span>
                     <h1 className="text-hero mb-lg font-serif italic" style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', letterSpacing: '-0.03em', lineHeight: '0.9' }}>
                         Mission & Philosophy.
                     </h1>
                 </header>
 
-                <div className="editorial-grid">
-                    <div className="editorial-col-8">
-                        {/* Chapter 01 */}
-                        <div style={{ marginBottom: '120px' }}>
+                <div className="flex flex-col" style={{ gap: '160px' }}>
+                    {/* Chapter 01: Origin */}
+                    <div className="grid grid-2" style={{ gap: '80px', alignItems: 'center' }}>
+                        <div>
                             <div className="flex items-center gap-md mb-md">
                                 <span className="text-label" style={{ opacity: 0.4 }}>01 / Origin</span>
                                 <div style={{ height: '1px', flex: 1, background: 'var(--border-color)' }}></div>
@@ -31,9 +32,23 @@ const Library = () => {
                                 to strip away the noise of fast fashion and return to the "architectural essential." We view garments not as products, but as structures for living.
                             </p>
                         </div>
+                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                            <img src={vastraOrigin} alt="The Studio" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px', background: 'var(--white)' }}>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 01: ARCHITECTURAL STUDIO STUDY</span>
+                            </div>
+                        </div>
+                    </div>
 
-                        {/* Chapter 02 */}
-                        <div style={{ marginBottom: '120px' }}>
+                    {/* Chapter 02: Process */}
+                    <div className="grid grid-2" style={{ gap: '80px', alignItems: 'center' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                            <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px', background: 'var(--white)' }}>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: TEXTILE DRAPE ANALYSIS</span>
+                            </div>
+                        </div>
+                        <div>
                             <div className="flex items-center gap-md mb-md">
                                 <span className="text-label" style={{ opacity: 0.4 }}>02 / Process</span>
                                 <div style={{ height: '1px', flex: 1, background: 'var(--border-color)' }}></div>
@@ -48,8 +63,10 @@ const Library = () => {
                                 creating a permanent record of our evolving aesthetic.
                             </p>
                         </div>
+                    </div>
 
-                        {/* Chapter 03 */}
+                    {/* Chapter 03: Collective */}
+                    <div className="grid grid-2" style={{ gap: '80px', alignItems: 'center' }}>
                         <div>
                             <div className="flex items-center gap-md mb-md">
                                 <span className="text-label" style={{ opacity: 0.4 }}>03 / The Collective</span>
@@ -62,19 +79,10 @@ const Library = () => {
                                 ensuring that every piece of 'Monolith' carries the weight of the entire collective.
                             </p>
                         </div>
-                    </div>
-
-                    <div className="editorial-col-4" style={{ display: 'flex', flexDirection: 'column', gap: '64px', paddingTop: '160px' }}>
                         <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
-                            <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src={editorial1} alt="Collective study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ padding: '20px', background: 'var(--white)' }}>
-                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 01: TEXTILE DRAPE ANALYSIS</span>
-                            </div>
-                        </div>
-                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
-                            <img src={editorial1} alt="Process study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                            <div style={{ padding: '20px', background: 'var(--white)' }}>
-                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: STRUCTURAL INTEGRITY STUDY</span>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 03: MULTIDISCIPLINARY OUTPUT STUDY</span>
                             </div>
                         </div>
                     </div>
