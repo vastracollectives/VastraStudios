@@ -1,8 +1,10 @@
 import React from 'react';
 import { ShoppingBag, X, Plus, Minus, Trash2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 const CartDrawer = () => {
+    const navigate = useNavigate();
     const {
         cart,
         isCartOpen,
