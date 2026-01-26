@@ -34,10 +34,9 @@ const Navigation = () => {
                         </Link>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <div className="nav-mobile-controls">
                         <button
-                            className="nav-cart"
-                            style={{ display: 'flex', md: { display: 'none' } }}
+                            className="nav-cart mobile-only"
                             onClick={() => setIsCartOpen(true)}
                         >
                             <ShoppingBag size={20} />

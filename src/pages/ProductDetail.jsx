@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Plus, Minus, ShoppingBag } from 'lucide-react';
+import { ShoppingBag, MapPin } from 'lucide-react';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
+import TechnicalAccordion from '../components/TechnicalAccordion';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -55,18 +56,25 @@ const ProductDetail = () => {
                             {product.description}
                         </p>
 
-                        <div className="pdp-details">
-                            {product.details.map((detail, idx) => (
-                                <div key={idx} className="pdp-detail-item">
-                                    <span>{detail.split(' ')[0]}</span>
-                                    <span>{detail.slice(detail.indexOf(' ') + 1)}</span>
-                                </div>
-                            ))}
+                        <TechnicalAccordion
+                            specs={product.technicalSpecs}
+                            care={product.careInstructions}
+                        />
+
+                        {/* Distribution Notice */}
+                        <div className="distribution-notice" style={{ marginBottom: '32px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                                <MapPin size={14} style={{ color: 'var(--text-muted)' }} />
+                                <span className="text-label" style={{ fontSize: '0.7rem' }}>Regional Distribution</span>
+                            </div>
+                            <p className="text-small italic font-serif" style={{ color: 'var(--text-charcoal)', opacity: 0.8 }}>
+                                Currently in "Friends & Family" phase. Orders are available for local collection in <strong>Edison, NJ</strong> and <strong>Hyderabad, India</strong> only.
+                            </p>
                         </div>
 
                         <button
                             className="btn btn-primary w-full"
-                            style={{ width: '100%', gap: '12px' }}
+                            style={{ width: '100%', gap: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                             onClick={() => addToCart(product)}
                             disabled={product.status === 'Sold Out'}
                         >

@@ -141,6 +141,8 @@ img {
 @media (min-width: 768px) {
   .nav-inner {
     padding: 0 48px;
+    justify-content: flex-start;
+    gap: 60px;
   }
 }
 
@@ -170,6 +172,7 @@ img {
   display: none;
   align-items: center;
   gap: 40px;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
@@ -199,6 +202,28 @@ img {
 
 @media (min-width: 768px) {
   .nav-toggle {
+    display: none;
+  }
+}
+
+.nav-mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .nav-mobile-controls {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
     display: none;
   }
 }
