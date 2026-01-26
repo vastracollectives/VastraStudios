@@ -15,9 +15,54 @@ const Checkout = () => {
         phone: '',
         region: 'Edison, NJ'
     });
+    const [errors, setErrors] = useState({});
 
     const handleInput = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+
+        // Per user request: number can only be numbers
+        if (name === 'phone') {
+            const digitOnly = value.replace(/\D/g, '');
+            setFormData({ ...formData, [name]: digitOnly });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
+
+        // Clear error when user types
+        if (errors[name]) {
+            setErrors({ ...errors, [name]: '' });
+        }
+    };
+
+    const validateStep1 = () => {
+        const newErrors = {};
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.email) {
+            newErrors.email = 'Email is required';
+        } else if (!emailRegex.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+
+        // Phone validation (already restricted to numbers, just check length/existence)
+        if (!formData.phone) {
+            newErrors.phone = 'Phone number is required';
+        } else if (formData.phone.length < 10) {
+            newErrors.phone = 'Please enter a valid phone number';
+        }
+
+        if (!formData.firstName) newErrors.firstName = 'First name is required';
+        if (!formData.lastName) newErrors.lastName = 'Last name is required';
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleContinue = () => {
+        if (validateStep1()) {
+            setStep(2);
+        }
     };
 
     if (cart.length === 0 && step !== 3) {
@@ -49,19 +94,49 @@ const Checkout = () => {
                             <div className="grid grid-2 mb-lg" style={{ gap: '24px' }}>
                                 <div className="form-group">
                                     <label className="text-label">Email Address</label>
-                                    <input type="email" name="email" value={formData.email} onChange={handleInput} placeholder="name@example.com" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInput}
+                                        placeholder="name@example.com"
+                                        autoComplete="email"
+                                    />
+                                    {errors.email && <span className="text-small italic" style={{ color: 'var(--accent-clay)', marginTop: '4px' }}>{errors.email}</span>}
                                 </div>
                                 <div className="form-group">
                                     <label className="text-label">Phone Number</label>
-                                    <input type="tel" name="phone" value={formData.phone} onChange={handleInput} placeholder="+1 555 000 0000" />
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleInput}
+                                        placeholder="5550000000"
+                                        autoComplete="tel"
+                                    />
+                                    {errors.phone && <span className="text-small italic" style={{ color: 'var(--accent-clay)', marginTop: '4px' }}>{errors.phone}</span>}
                                 </div>
                                 <div className="form-group">
                                     <label className="text-label">First Name</label>
-                                    <input type="text" name="firstName" value={formData.firstName} onChange={handleInput} />
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleInput}
+                                        autoComplete="given-name"
+                                    />
+                                    {errors.firstName && <span className="text-small italic" style={{ color: 'var(--accent-clay)', marginTop: '4px' }}>{errors.firstName}</span>}
                                 </div>
                                 <div className="form-group">
                                     <label className="text-label">Last Name</label>
-                                    <input type="text" name="lastName" value={formData.lastName} onChange={handleInput} />
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleInput}
+                                        autoComplete="family-name"
+                                    />
+                                    {errors.lastName && <span className="text-small italic" style={{ color: 'var(--accent-clay)', marginTop: '4px' }}>{errors.lastName}</span>}
                                 </div>
                                 <div className="form-group" style={{ gridColumn: 'span 2' }}>
                                     <label className="text-label">Collection Region</label>
@@ -79,7 +154,7 @@ const Checkout = () => {
                                 <Link to="/collections" className="featured-link">
                                     <ArrowLeft size={16} /> Return to Shop
                                 </Link>
-                                <button className="btn btn-primary" onClick={() => setStep(2)}>
+                                <button className="btn btn-primary" onClick={handleContinue}>
                                     Continue to Payment
                                 </button>
                             </div>
