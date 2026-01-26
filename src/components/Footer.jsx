@@ -6,6 +6,22 @@ const Footer = () => {
 
     return (
         <footer className="footer">
+            <div className="footer-ticker">
+                <div className="ticker-track">
+                    <span>SEAS01: MONOLITH</span>
+                    <span>VASTRA STUDIOS</span>
+                    <span>BUILT FOR THE LONG HAUL</span>
+                    <span>EDISON NJ</span>
+                    <span>HYDERABAD IN</span>
+                    <span>ESTABLISHED IN THE VOID</span>
+                    <span>SEAS01: MONOLITH</span>
+                    <span>VASTRA STUDIOS</span>
+                    <span>BUILT FOR THE LONG HAUL</span>
+                    <span>EDISON NJ</span>
+                    <span>HYDERABAD IN</span>
+                    <span>ESTABLISHED IN THE VOID</span>
+                </div>
+            </div>
             <div className="container">
                 <div className="footer-inner">
                     <div className="footer-brand">

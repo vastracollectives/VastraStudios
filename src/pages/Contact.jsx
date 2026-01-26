@@ -1,52 +1,97 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Lock, MapPin, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitted(true);
+    };
+
     return (
-        <section className="section">
+        <section className="section-lg" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
             <div className="container">
-                <div className="grid grid-2" style={{ gap: '80px' }}>
-                    <div>
-                        <h1 className="text-hero mb-md">Connect.</h1>
-                        <p className="text-body text-muted mb-xl">
-                            General inquiries, press, and wholesale.
+                <div className="grid grid-2" style={{ gap: '100px', alignItems: 'center' }}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <span className="tag">The Collective</span>
+                        <h1 className="text-hero font-serif italic mb-lg" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: '0.9' }}>
+                            Member<br />Access.
+                        </h1>
+                        <p className="text-body mb-xl" style={{ maxWidth: '500px' }}>
+                            Vastra Studios operates on an incremental drop basis. Members receive early access codes
+                            to "The Drop" 24 hours before public release.
                         </p>
 
-                        <div style={{ marginBottom: '32px' }}>
-                            <span className="text-label" style={{ display: 'block', marginBottom: '8px' }}>Email</span>
-                            <a href="mailto:hello@vastrastudios.com" className="text-h3">hello@vastrastudios.com</a>
+                        <div className="flex flex-col gap-md">
+                            <div className="flex items-start gap-sm">
+                                <Shield size={18} className="mt-xs text-muted" />
+                                <div>
+                                    <span className="text-label block">Privacy Priority</span>
+                                    <p className="text-small text-muted">No newsletters. Only active drop notifications.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-sm">
+                                <MapPin size={18} className="mt-xs text-muted" />
+                                <div>
+                                    <span className="text-label block">Regional Priority</span>
+                                    <p className="text-small text-muted">First access for Edison, NJ and Hyderabad locals.</p>
+                                </div>
+                            </div>
                         </div>
+                    </motion.div>
 
-                        <div>
-                            <span className="text-label" style={{ display: 'block', marginBottom: '8px' }}>Instagram</span>
-                            <a href="https://instagram.com/Vastra.Studios" target="_blank" rel="noopener noreferrer" className="text-h3">@vastra.studios</a>
-                        </div>
-                    </div>
-
-                    <div style={{ background: 'var(--white)', padding: '48px', border: '1px solid var(--border-color)' }}>
-                        <form style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                            <div className="form-group">
-                                <label className="form-label">Name</label>
-                                <input type="text" className="form-input" placeholder="Your name" />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        style={{ background: 'var(--white)', padding: '64px', border: '1px solid var(--border-color)', position: 'relative' }}
+                    >
+                        {isSubmitted ? (
+                            <div className="text-center py-xl">
+                                <motion.div
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    className="mb-lg"
+                                >
+                                    <Lock size={64} style={{ color: 'var(--text-charcoal)', margin: '0 auto' }} />
+                                </motion.div>
+                                <h1 className="text-h3 font-serif italic mb-md">Request Received.</h1>
+                                <p className="text-body text-muted">If approved, your access code will arrive via email.</p>
                             </div>
-                            <div className="form-group">
-                                <label className="form-label">Email</label>
-                                <input type="email" className="form-input" placeholder="hello@example.com" />
-                            </div>
-                            <div className="form-group">
-                                <label className="form-label">Subject</label>
-                                <select className="form-input">
-                                    <option>Customer Support</option>
-                                    <option>Wholesale Inquiry</option>
-                                    <option>Press</option>
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <label className="form-label">Message</label>
-                                <textarea className="form-textarea" placeholder="How can we help?"></textarea>
-                            </div>
-                            <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Send Message</button>
-                        </form>
-                    </div>
+                        ) : (
+                            <form onSubmit={handleSubmit}>
+                                <div className="mb-lg">
+                                    <h2 className="text-h3 font-serif italic mb-sm">Join the Waitlist</h2>
+                                    <p className="text-small text-muted">Secure your place for Season 01: Monolith</p>
+                                </div>
+                                <div className="form-group mb-md">
+                                    <label className="text-label">Name</label>
+                                    <input type="text" placeholder="Full name" required />
+                                </div>
+                                <div className="form-group mb-md">
+                                    <label className="text-label">Email Address</label>
+                                    <input type="email" placeholder="name@example.com" required />
+                                </div>
+                                <div className="form-group mb-xl">
+                                    <label className="text-label">Primary Region</label>
+                                    <select required>
+                                        <option value="us">United States (Edison, NJ)</option>
+                                        <option value="in">India (Hyderabad)</option>
+                                        <option value="other">International</option>
+                                    </select>
+                                </div>
+                                <button type="submit" className="btn btn-primary w-full" style={{ width: '100%', gap: '12px' }}>
+                                    Request Access <ArrowRight size={18} />
+                                </button>
+                            </form>
+                        )}
+                    </motion.div>
                 </div>
             </div>
         </section>
