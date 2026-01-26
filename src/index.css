@@ -552,13 +552,18 @@ img {
   gap: 24px;
 }
 
-.grid-2 {
+.grid-2,
+.grid-3 {
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
