@@ -33,7 +33,7 @@ const Archive = () => {
                 <div className="mb-xl">
                     <span className="tag">Permanent Record</span>
                     <h1 className="text-hero mb-md">The Archive.</h1>
-                    <p className="text-body text-muted" style={{ maxWidth: '600px' }}>
+                    <p className="text-body text-muted" style={{ maxWidth: '600px', paddingBottom: '44px' }}>
                         A collective memory of past explorations. These items are the foundation of the Vastra aesthetic, preserved as technical references for future silhouttes.
                     </p>
                 </div>
@@ -55,12 +55,11 @@ const Archive = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-3" style={{ gap: '64px 32px' }}>
+                            <div className="grid grid-3" style={{ gap: '64px 32px', paddingTop: '14px' }}>
                                 {season.items.map((item, iIdx) => (
                                     <div key={iIdx} className="archive-item-group">
                                         <ProductCard
                                             title={item.title}
-                                            price="Out of Stock"
                                             imagePlaceholder={item.placeholder}
                                             archive={true}
                                         />
