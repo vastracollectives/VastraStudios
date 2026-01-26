@@ -41,13 +41,7 @@ const Library = () => {
                     </div>
 
                     {/* Chapter 02: Process */}
-                    <div className="grid grid-2" style={{ gap: '80px', alignItems: 'center' }}>
-                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
-                            <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                            <div style={{ padding: '20px', background: 'var(--white)' }}>
-                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: TEXTILE DRAPE ANALYSIS</span>
-                            </div>
-                        </div>
+                    <div className="grid grid-2 grid-reverse" style={{ gap: '80px', alignItems: 'center' }}>
                         <div>
                             <div className="flex items-center gap-md mb-md">
                                 <span className="text-label" style={{ opacity: 0.4 }}>02 / Process</span>
@@ -62,6 +56,12 @@ const Library = () => {
                                 We operate on a "Drop & Archive" model. Once a collection is sold out, it is archived as a technical reference,
                                 creating a permanent record of our evolving aesthetic.
                             </p>
+                        </div>
+                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                            <img src={editorial2} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px', background: 'var(--white)' }}>
+                                <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: TEXTILE DRAPE ANALYSIS</span>
+                            </div>
                         </div>
                     </div>
 
