@@ -1,3 +1,6 @@
+import React from 'react';
+import vastraOrigin from '../images/vastra_origin.png';
+import vastraProcess from '../images/vastra_process.png';
 import vastraCollective from '../images/vastra_collective.png';
 
 const Library = () => {
