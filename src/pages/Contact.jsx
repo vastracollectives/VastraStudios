@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Shield, Lock, MapPin, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
@@ -14,11 +13,7 @@ const Contact = () => {
         <section className="section-lg" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
             <div className="container">
                 <div className="grid grid-2" style={{ gap: '100px', alignItems: 'center' }}>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
+                    <div>
                         <span className="tag">The Collective</span>
                         <h1 className="text-hero font-serif italic mb-lg" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: '0.9' }}>
                             Member<br />Access.
@@ -44,23 +39,14 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        style={{ background: 'var(--white)', padding: '64px', border: '1px solid var(--border-color)', position: 'relative' }}
-                    >
+                    <div style={{ background: 'var(--white)', padding: '64px', border: '1px solid var(--border-color)', position: 'relative' }}>
                         {isSubmitted ? (
                             <div className="text-center py-xl">
-                                <motion.div
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    className="mb-lg"
-                                >
+                                <div className="mb-lg">
                                     <Lock size={64} style={{ color: 'var(--text-charcoal)', margin: '0 auto' }} />
-                                </motion.div>
+                                </div>
                                 <h1 className="text-h3 font-serif italic mb-md">Request Received.</h1>
                                 <p className="text-body text-muted">If approved, your access code will arrive via email.</p>
                             </div>
@@ -91,7 +77,7 @@ const Contact = () => {
                                 </button>
                             </form>
                         )}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
