@@ -4,6 +4,9 @@ import longsleeve from './images/apparel_longsleeve.png';
 import basicTee from './images/basic_tee.PNG';
 import basicTeePosed from './images/basic_tee_posed.PNG';
 
+import basicSweats from './images/basic_sweats.PNG';
+import basicSweatsPosed from './images/basic_sweats_posed.PNG';
+
 export const products = [
     {
         id: 'heavyweight-t-shirt',
@@ -29,25 +32,26 @@ export const products = [
         status: "Active"
     },
     {
-        id: 'structure-pant',
-        title: "Structure Pant",
-        price: "$140",
-        imageSrc: vastraProcess,
-        description: "An exploration of silhouette. The Structure Pant features a wide leg and tapered ankle, creating a distinct basics form. Durable heavy canvas construction.",
+        id: 'heavyweight-sweatpant',
+        title: "Heavyweight Sweatpant",
+        price: "$95",
+        imageSrc: basicSweats,
+        imageSecondary: basicSweatsPosed,
+        description: "The definitive lounge piece. The Heavyweight Sweatpant features a structured wide leg and architectural volume, constructed from 500GSM Japanese loopback cotton for the ultimate basics foundation.",
         details: [
-            "Heavy Canvas",
-            "Wide Tapered fit",
-            "Internal drawstring",
-            "Raw reinforced seams"
+            "500GSM Heavyweight Loopback",
+            "Wide leg architectural fit",
+            "Internal braided drawstring",
+            "Hidden reinforced pockets"
         ],
         technicalSpecs: [
-            { label: "Material", value: "15oz Heavy Canvas" },
-            { label: "Fit", value: "Structural Tapered" },
-            { label: "Closure", value: "Internal Braided Drawstring" },
-            { label: "Finish", value: "Raw Industrial Seams" },
+            { label: "Material", value: "500GSM Japanese Cotton" },
+            { label: "Fit", value: "Structural Wide Leg" },
+            { label: "Closure", value: "Internal Drawstring" },
+            { label: "Finish", value: "Invisibile Reinforced Seams" },
             { label: "Origin", value: "Constructed in Hyderabad" }
         ],
-        careInstructions: "Spot clean recommended. For deep clean, hand wash cold. Avoid high heat to maintain the canvas rigidity. Colors may fade beautifully over time.",
+        careInstructions: "Machine wash cold. Avoid high heat to maintain the structural integrity of the loopback weave. Colors will age naturally.",
         status: "Limited"
     },
     {
