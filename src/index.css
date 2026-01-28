@@ -439,7 +439,7 @@ img {
 }
 
 .project-card-image {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   background: var(--bg-bone);
   overflow: hidden;
   position: relative;

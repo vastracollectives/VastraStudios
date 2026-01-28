@@ -32,7 +32,7 @@ const Library = () => {
                                 to strip away the noise of fast fashion and return to the "architectural essential." We view garments not as products, but as structures for living.
                             </p>
                         </div>
-                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '1/1', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
                             <img src={vastraOrigin} alt="The Studio" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ padding: '20px', background: 'var(--white)' }}>
                                 <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 01: ARCHITECTURAL STUDIO STUDY</span>
@@ -57,7 +57,7 @@ const Library = () => {
                                 creating a permanent record of our evolving aesthetic.
                             </p>
                         </div>
-                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '1/1', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
                             <img src={vastraProcess} alt="Textile study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ padding: '20px', background: 'var(--white)' }}>
                                 <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 02: STRUCTURAL DRAPE STUDY</span>
@@ -79,7 +79,7 @@ const Library = () => {
                                 ensuring that every piece of 'Basics' carries the weight of the entire collective.
                             </p>
                         </div>
-                        <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
+                        <div className="pdp-image-container" style={{ aspectRatio: '1/1', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
                             <img src={vastraCollective} alt="Collective study" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ padding: '20px', background: 'var(--white)' }}>
                                 <span className="text-label block" style={{ fontSize: '9px', opacity: 0.5 }}>FIG. 03: MULTIDISCIPLINARY OUTPUT STUDY</span>
