@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ShoppingBag, MapPin } from 'lucide-react';
+import { ShoppingBag, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { products } from '../data';
 import { useCart } from '../context/CartContext';
 import TechnicalAccordion from '../components/TechnicalAccordion';
@@ -8,6 +8,7 @@ import TechnicalAccordion from '../components/TechnicalAccordion';
 const ProductDetail = () => {
     const { id } = useParams();
     const { addToCart } = useCart();
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const product = products.find(p => p.id === id);
 
@@ -19,6 +20,11 @@ const ProductDetail = () => {
             </div>
         );
     }
+
+    const images = [product.imageSrc, product.imageSecondary].filter(Boolean);
+
+    const nextImage = () => setActiveIndex((prev) => (prev + 1) % images.length);
+    const prevImage = () => setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
 
     return (
         <div className="section">
@@ -33,21 +39,36 @@ const ProductDetail = () => {
                 </nav>
 
                 <div className="pdp-grid">
-                    {/* Image Column */}
-                    <div className="pdp-image-scroll">
-                        <div className="pdp-image-container">
-                            <img src={product.imageSrc} alt={product.title} />
+                    {/* Premium Gallery Column */}
+                    <div className="pdp-gallery-frame">
+                        <div className="pdp-gallery-main">
+                            {images.map((img, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`pdp-gallery-image ${idx === activeIndex ? 'active' : ''}`}
+                                >
+                                    <img src={img} alt={`${product.title} view ${idx + 1}`} />
+                                </div>
+                            ))}
+
+                            {images.length > 1 && (
+                                <>
+                                    <div className="pdp-gallery-nav">
+                                        <button onClick={prevImage} className="gallery-nav-btn" aria-label="Previous image">
+                                            <ChevronLeft size={20} strokeWidth={1} />
+                                        </button>
+                                        <button onClick={nextImage} className="gallery-nav-btn" aria-label="Next image">
+                                            <ChevronRight size={20} strokeWidth={1} />
+                                        </button>
+                                    </div>
+                                    <div className="pdp-gallery-counter">
+                                        <span>{String(activeIndex + 1).padStart(2, '0')}</span>
+                                        <span className="separator">/</span>
+                                        <span>{String(images.length).padStart(2, '0')}</span>
+                                    </div>
+                                </>
+                            )}
                         </div>
-                        {product.imageSecondary && (
-                            <div className="pdp-image-container">
-                                <img src={product.imageSecondary} alt={`${product.title} detail`} />
-                            </div>
-                        )}
-                        {!product.imageSecondary && (
-                            <div className="pdp-image-container" style={{ filter: 'grayscale(1)', opacity: 0.5 }}>
-                                <img src={product.imageSrc} alt={`${product.title} detail`} />
-                            </div>
-                        )}
                     </div>
 
                     {/* Info Column */}
