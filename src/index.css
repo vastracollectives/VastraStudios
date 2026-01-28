@@ -98,6 +98,65 @@ img {
   padding: 0 24px;
 }
 
+/* ============================================
+   UTILITIES & POSITIONING
+   ============================================ */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.top-3 {
+  top: 12px;
+}
+
+.left-3 {
+  left: 12px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-md {
+  gap: 32px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+
 @media (min-width: 768px) {
   .container {
     padding: 0 48px;
