@@ -171,6 +171,12 @@ img {
   padding: 120px 0;
 }
 
+/* Page Header Optimization */
+.main-content>section:first-of-type {
+  padding-top: 40px;
+}
+
+
 /* ============================================
    NAVIGATION
    ============================================ */
