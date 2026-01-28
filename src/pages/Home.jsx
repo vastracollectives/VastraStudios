@@ -12,7 +12,7 @@ const Home = () => {
             {/* Editorial Hero */}
             <section className="hero" style={{ paddingTop: '160px' }}>
                 <div className="hero-content">
-                    <span className="tag">Season 01: Monolith</span>
+                    <span className="tag">Season 01: Basics</span>
                     <h1 className="text-hero hero-title font-serif italic" style={{ fontSize: 'clamp(3rem, 10vw, 7rem)', lineHeight: '0.9', marginBottom: '48px' }}>
                         Heavyweight<br />Silence.
                     </h1>

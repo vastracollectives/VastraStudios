@@ -38,10 +38,16 @@ const ProductDetail = () => {
                         <div className="pdp-image-container">
                             <img src={product.imageSrc} alt={product.title} />
                         </div>
-                        {/* Secondary view placeholder */}
-                        <div className="pdp-image-container" style={{ filter: 'grayscale(1)', opacity: 0.5 }}>
-                            <img src={product.imageSrc} alt={`${product.title} detail`} />
-                        </div>
+                        {product.imageSecondary && (
+                            <div className="pdp-image-container">
+                                <img src={product.imageSecondary} alt={`${product.title} detail`} />
+                            </div>
+                        )}
+                        {!product.imageSecondary && (
+                            <div className="pdp-image-container" style={{ filter: 'grayscale(1)', opacity: 0.5 }}>
+                                <img src={product.imageSrc} alt={`${product.title} detail`} />
+                            </div>
+                        )}
                     </div>
 
                     {/* Info Column */}

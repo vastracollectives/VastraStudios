@@ -8,7 +8,7 @@ const Collections = () => {
             <div className="container">
                 <div className="mb-xl" style={{ paddingBottom: '44px' }}>
                     <span className="tag">Current Drop</span>
-                    <h1 className="text-hero mb-md">Season 01:<br />Monolith</h1>
+                    <h1 className="text-hero mb-md">Season 01:<br />Basics</h1>
                     <p className="text-body text-muted" style={{ maxWidth: '600px' }}>
                         A study in weight and structure. Our primary collection focuses on architectural silhouettes
                         and premium, durable textiles.

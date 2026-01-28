@@ -1,23 +1,26 @@
-import editorial1 from './images/editorial_1.png';
-import editorial2 from './images/editorial_2.png';
+import vastraOrigin from './images/vastra_origin.png';
+import vastraProcess from './images/vastra_process.png';
 import longsleeve from './images/apparel_longsleeve.png';
+import basicTee from './images/basic_tee.PNG';
+import basicTeePosed from './images/basic_tee_posed.PNG';
 
 export const products = [
     {
-        id: 'heavyweight-hoodie',
-        title: "Heavyweight Hoodie",
-        price: "$95",
-        imageSrc: editorial1,
-        description: "A study in structure and silence. Our signature hoodie is constructed from 500GSM Japanese loopback cotton. Designed with a structured hood and architectural volume.",
+        id: 'heavyweight-t-shirt',
+        title: "Heavyweight T-Shirt",
+        price: "$65",
+        imageSrc: basicTee,
+        imageSecondary: basicTeePosed,
+        description: "A study in structure and silence. Our signature heavyweight t-shirt is constructed from 400GSM premium jersey cotton. Designed with a structured fit and architectural volume.",
         details: [
             "100% Cotton",
-            "Heavyweight Loopback",
+            "Heavyweight Jersey",
             "Dropped shoulder",
-            "Hidden side-seam pockets"
+            "Reinforced collar"
         ],
         technicalSpecs: [
-            { label: "Weight", value: "500 GSM" },
-            { label: "Weave", value: "Japanese Loopback" },
+            { label: "Weight", value: "400 GSM" },
+            { label: "Weave", value: "Premium Interlock" },
             { label: "Composition", value: "100% Organic Cotton" },
             { label: "Origin", value: "Constructed in Hyderabad" },
             { label: "Stitching", value: "Reinforced Twin-Needle" }
@@ -29,8 +32,8 @@ export const products = [
         id: 'structure-pant',
         title: "Structure Pant",
         price: "$140",
-        imageSrc: editorial2,
-        description: "An exploration of silhouette. The Structure Pant features a wide leg and tapered ankle, creating a distinct monolithic form. Durable heavy canvas construction.",
+        imageSrc: vastraProcess,
+        description: "An exploration of silhouette. The Structure Pant features a wide leg and tapered ankle, creating a distinct basics form. Durable heavy canvas construction.",
         details: [
             "Heavy Canvas",
             "Wide Tapered fit",
@@ -52,7 +55,7 @@ export const products = [
         title: "Core Longsleeve",
         price: "$65",
         imageSrc: longsleeve,
-        description: "The foundation of the wardrobe. Minimalist long-sleeved tee with a reinforced neckline and refined drape. Built for layering or solo wear.",
+        description: "The foundation of the wardrobe. Minimalist long-sleeved tee from the Basics series, featuring a reinforced neckline and refined drape. Built for layering or solo wear.",
         details: [
             "Mid-weight jersey",
             "Reinforced collar",

@@ -10,11 +10,13 @@ const Footer = () => {
                 <div className="ticker-track">
                     <span>VASTRA STUDIOS</span>
                     <span>BUILT FOR THE LONG HAUL</span>
+                    <span>BASICS SERIES 01</span>
                     <span>EDISON NJ</span>
                     <span>HYDERABAD IN</span>
                     <span>ESTABLISHED IN THE VOID</span>
                     <span>VASTRA STUDIOS</span>
                     <span>BUILT FOR THE LONG HAUL</span>
+                    <span>BASICS SERIES 01</span>
                     <span>EDISON NJ</span>
                     <span>HYDERABAD IN</span>
                     <span>ESTABLISHED IN THE VOID</span>

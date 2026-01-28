@@ -76,7 +76,7 @@ const Library = () => {
                             <p className="text-body text-muted">
                                 Vastra Studios is the physical heartbeat of the VASTRA group—a multidisciplinary collective of creators.
                                 We share resources, aesthetics, and philosophies across digital, physical, and visual mediums,
-                                ensuring that every piece of 'Monolith' carries the weight of the entire collective.
+                                ensuring that every piece of 'Basics' carries the weight of the entire collective.
                             </p>
                         </div>
                         <div className="pdp-image-container" style={{ aspectRatio: '3/4', border: '1px solid var(--border-color)', overflow: 'hidden' }}>

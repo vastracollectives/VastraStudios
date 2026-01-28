@@ -54,7 +54,7 @@ const Contact = () => {
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-lg">
                                     <h2 className="text-h3 font-serif italic mb-sm">Join the Waitlist</h2>
-                                    <p className="text-small text-muted">Secure your place for Season 01: Monolith</p>
+                                    <p className="text-small text-muted">Secure your place for Season 01: Basics</p>
                                 </div>
                                 <div className="form-group mb-md">
                                     <label className="text-label">Name</label>
