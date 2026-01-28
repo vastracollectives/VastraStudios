@@ -7,8 +7,8 @@ const ProductCard = ({ id, title, price, imageSrc, imagePlaceholder, status, arc
             <div className="project-card-image">
                 {/* Status Tag */}
                 {status && (
-                    <div className="absolute top-4 left-4 z-10">
-                        <span className={`tag ${status === 'Sold Out' ? 'tag-sold-out' : 'tag-active'}`}>
+                    <div className="absolute top-3 left-3 z-30">
+                        <span className={`tag ${status === 'Sold Out' ? 'tag-sold-out' : 'tag-active'}`} style={{ margin: 0, backdropFilter: 'blur(4px)', background: status === 'Sold Out' ? 'rgba(255,255,255,0.1)' : 'var(--text-charcoal)' }}>
                             {status}
                         </span>
                     </div>
