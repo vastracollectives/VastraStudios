@@ -11,7 +11,7 @@ export const products = [
     {
         id: 'heavyweight-t-shirt',
         title: "Heavyweight T-Shirt",
-        price: "$65",
+        price: "$15",
         imageSrc: basicTee,
         imageSecondary: basicTeePosed,
         description: "A study in structure and silence. Our signature heavyweight t-shirt is constructed from 400GSM premium jersey cotton. Designed with a structured fit and architectural volume.",
@@ -34,7 +34,7 @@ export const products = [
     {
         id: 'heavyweight-sweatpant',
         title: "Heavyweight Sweatpant",
-        price: "$95",
+        price: "$25",
         imageSrc: basicSweats,
         imageSecondary: basicSweatsPosed,
         description: "The definitive lounge piece. The Heavyweight Sweatpant features a structured wide leg and architectural volume, constructed from 500GSM Japanese loopback cotton for the ultimate basics foundation.",
