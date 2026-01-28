@@ -27,7 +27,7 @@ const ProductDetail = () => {
     const prevImage = () => setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
 
     return (
-        <div className="section">
+        <section className="section">
             <div className="container">
                 {/* Breadcrumbs */}
                 <nav className="breadcrumbs">
@@ -111,7 +111,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
