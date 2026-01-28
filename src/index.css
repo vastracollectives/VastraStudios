@@ -213,6 +213,9 @@ img {
   text-transform: uppercase;
   color: #222222;
   position: relative;
+  display: inline-block;
+  transform: scaleY(0.85);
+  transform-origin: left;
 }
 
 .nav-brand::after {
