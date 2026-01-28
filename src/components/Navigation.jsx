@@ -12,7 +12,7 @@ const Navigation = () => {
             <nav className="nav">
                 <div className="nav-inner">
                     <Link to="/" className="nav-brand">
-                        Vastra Studios
+                        VASTRA STUDIOS
                     </Link>
 
                     <div className="nav-links">
